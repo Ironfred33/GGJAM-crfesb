@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ParticleFollow : MonoBehaviour
 {
-    public Transform ballPos;
+    public GameObject ball;
+    public Vector3 destination;
+    public float waitTime;
     void Start()
     {
         
@@ -13,6 +15,15 @@ public class ParticleFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(ballPos.position.x, ballPos.position.y, ballPos.position.z);
+        destination = ball.transform.position;
+        StartCoroutine(MoveParticles());
+    }
+
+    private IEnumerator MoveParticles()
+    {
+        yield return new WaitForSeconds(waitTime);
+        transform.position = destination;
+        yield return null;
+
     }
 }
