@@ -30,7 +30,7 @@ public class ThrowBall : MonoBehaviour
 
     void Start()
     {
-        rbSphere = sphere.GetComponent<Rigidbody>();
+        //rbSphere = sphere.GetComponent<Rigidbody>();
 
         _maxForce = maxHoldTime;
         
@@ -89,9 +89,6 @@ public class ThrowBall : MonoBehaviour
             UpdateView();
             
 
-            
-            
-
         }
 
         if(Input.GetMouseButtonUp(0))
@@ -113,8 +110,6 @@ public class ThrowBall : MonoBehaviour
             throwForceGUI.fillAmount = 0;
         }
 
-          
-     
     }
 
     
@@ -128,7 +123,11 @@ public class ThrowBall : MonoBehaviour
             
             {
             
+                 sphere = other.gameObject;
+
                  sphere.transform.position = _spherePos;
+
+                 rbSphere = other.gameObject.GetComponent<Rigidbody>();
                  
                  carriesSphere = true;
                  
