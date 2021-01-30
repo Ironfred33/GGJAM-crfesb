@@ -15,17 +15,18 @@ public class Ball : MonoBehaviour
     private Light ballLight;
     private MeshRenderer ballRenderer;
 
+
     void Start()
     {
         ballLight = GetComponent<Light>();
         ballRenderer = GetComponent<MeshRenderer>();
+     
     }
 
     private void RedBall()
     {
         ballLight.color = Color.red;
         ballRenderer.material.SetColor("_EmissionColor", Color.red);
-        
     }
 
     private void BlueBall()

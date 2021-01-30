@@ -9,8 +9,11 @@ public class ParticleFollow : MonoBehaviour
     public float waitTime;
     public Ball ballMachine;
 
+    private ParticleSystem ps;
+
     void Start()
     {
+        ps = GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -18,6 +21,24 @@ public class ParticleFollow : MonoBehaviour
     {
         destination = ball.transform.position;
         StartCoroutine(MoveParticles());
+
+        if(ballMachine.currentState == ballState.red)
+        {
+            var main = ps.main;
+            main.startColor = new ParticleSystem.MinMaxGradient(Color.red);
+        }
+
+        else if(ballMachine.currentState == ballState.blue)
+        {
+            var main = ps.main;
+            main.startColor = new ParticleSystem.MinMaxGradient(Color.blue);
+        }
+
+        else if (ballMachine.currentState == ballState.yellow)
+        {
+            var main = ps.main;
+            main.startColor = new ParticleSystem.MinMaxGradient(Color.yellow);
+        }
     }
 
     private IEnumerator MoveParticles()
