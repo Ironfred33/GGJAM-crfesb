@@ -5054,6 +5054,7 @@ MonoBehaviour:
   ball: {fileID: 0}
   destination: {x: 0, y: 0, z: 0}
   waitTime: 0
+  ballMachine: {fileID: 0}
 --- !u!1 &125791232
 GameObject:
   m_ObjectHideFlags: 0
@@ -18348,6 +18349,7 @@ MonoBehaviour:
   spherePos: {fileID: 303730383}
   sphere: {fileID: 1992805527}
   rbSphere: {fileID: 0}
+  player: {fileID: 1049731537}
   throwForceGUI: {fileID: 1986661614}
   thrust: 15
   maxHoldTime: 2
@@ -21226,6 +21228,7 @@ MonoBehaviour:
   spherePos: {fileID: 303730383}
   sphere: {fileID: 1992805527}
   rbSphere: {fileID: 0}
+  player: {fileID: 0}
   throwForceGUI: {fileID: 1986661614}
   thrust: 30
   maxHoldTime: 2
