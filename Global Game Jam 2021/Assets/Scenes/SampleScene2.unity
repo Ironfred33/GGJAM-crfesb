@@ -18245,7 +18245,6 @@ GameObject:
   - component: {fileID: 1049731538}
   - component: {fileID: 1049731543}
   - component: {fileID: 1049731544}
-  - component: {fileID: 0}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Player
@@ -18373,27 +18372,28 @@ MonoBehaviour:
   spherePos: {fileID: 303730383}
   sphere: {fileID: 1992805527}
   rbSphere: {fileID: 0}
-  throwForceGUI: {fileID: 0}
+  throwForceGUI: {fileID: 484679602}
   thrust: 30
   maxHoldTime: 2
---- !u!108 &1049731545Light:
+--- !u!108 &1049731545
+Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049731537}
+  m_GameObject: {fileID: 1824881768}
   m_Enabled: 1
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 3
+  m_Intensity: 2
+  m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
+  m_CookieSize: 60
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -18426,7 +18426,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -20248,6 +20248,37 @@ Transform:
   m_Father: {fileID: 984733958}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1824881768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1824881769}
+  - component: {fileID: 1049731545}
+  m_Layer: 0
+  m_Name: Recovery GameObject (1049731545)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1824881769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824881768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1866506084
 GameObject:
   m_ObjectHideFlags: 0
@@ -21048,9 +21079,10 @@ GameObject:
   - component: {fileID: 1992805528}
   - component: {fileID: 1992805533}
   - component: {fileID: 1992805534}
-  - component: {fileID: 1992805536}
   - component: {fileID: 1992805537}
   - component: {fileID: 1992805538}
+  - component: {fileID: 1992805535}
+  - component: {fileID: 1992805536}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Sphere
@@ -21239,7 +21271,8 @@ MonoBehaviour:
   rbSphere: {fileID: 0}
   throwForceGUI: {fileID: 0}
   thrust: 30
-  maxHoldTime: 2--- !u!82 &1992805536
+  maxHoldTime: 2
+--- !u!82 &1992805536
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -21250,7 +21283,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 491ae9f8047951449b6f1da434b245a9, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
