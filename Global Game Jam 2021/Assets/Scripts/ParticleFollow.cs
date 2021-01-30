@@ -7,9 +7,12 @@ public class ParticleFollow : MonoBehaviour
     public GameObject ball;
     public Vector3 destination;
     public float waitTime;
+    public Ball ballMachine;
+
+    public RedParticles red;
+
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -17,6 +20,11 @@ public class ParticleFollow : MonoBehaviour
     {
         destination = ball.transform.position;
         StartCoroutine(MoveParticles());
+
+        if(ballMachine.currentState == ballState.red)
+        {
+            red.enabled = true;
+        }
     }
 
     private IEnumerator MoveParticles()
