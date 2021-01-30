@@ -16,6 +16,14 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
+    
+    // Bei Respawn
+    public void ReloadCurrentScene()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
+    }
+
     // Load first level
     public void LoadStartScene()
     {

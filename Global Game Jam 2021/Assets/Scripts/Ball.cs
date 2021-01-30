@@ -5,7 +5,7 @@ using UnityEngine;
 public enum ballState
 {
     blue, 
-    yellow,
+    green,
     red
 }
 
@@ -14,6 +14,7 @@ public class Ball : MonoBehaviour
     public ballState currentState;
     private Light ballLight;
     private MeshRenderer ballRenderer;
+    private bool destroyEnemy;
 
 
     void Start()
@@ -35,6 +36,21 @@ public class Ball : MonoBehaviour
         ballRenderer.material.SetColor("_EmissionColor", Color.blue);
     }
 
+    private void GreenBall()
+    {
+        ballLight.color = Color.green;
+        ballRenderer.material.SetColor("_EmissionColor", Color.green);
+
+        
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Enemy") && currentState == ballState.green)
+        {
+            Object.Destroy(collision.gameObject);
+        }
+    }
 
     void Update()
     {
@@ -46,6 +62,11 @@ public class Ball : MonoBehaviour
         else if(currentState == ballState.blue)
         {
             BlueBall();
+        }
+
+        else if(currentState == ballState.green)
+        {
+            GreenBall();
         }
     }
 }

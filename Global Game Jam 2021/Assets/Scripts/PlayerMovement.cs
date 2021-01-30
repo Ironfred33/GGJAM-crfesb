@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 moveInput;
     private Vector3 moveVelocity;
     private Rigidbody rb;
+    public SceneLoader sceneload;
+    public KeyCode respawnKey;
 
     public float speed = 5;
     void Start()
@@ -21,6 +23,11 @@ public class PlayerMovement : MonoBehaviour
     {
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput * moveSpeed;
+
+        if(Input.GetKeyDown(respawnKey))
+        {
+            sceneload.ReloadCurrentScene();
+        }
 
 
         
@@ -48,5 +55,13 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
        rb.velocity = moveVelocity;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Deadly"))
+        {
+            sceneload.ReloadCurrentScene();
+        }
     }
 }

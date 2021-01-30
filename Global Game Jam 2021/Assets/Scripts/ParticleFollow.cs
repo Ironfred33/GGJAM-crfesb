@@ -34,10 +34,10 @@ public class ParticleFollow : MonoBehaviour
             main.startColor = new ParticleSystem.MinMaxGradient(Color.blue);
         }
 
-        else if (ballMachine.currentState == ballState.yellow)
+        else if (ballMachine.currentState == ballState.green)
         {
             var main = ps.main;
-            main.startColor = new ParticleSystem.MinMaxGradient(Color.yellow);
+            main.startColor = new ParticleSystem.MinMaxGradient(Color.green);
         }
     }
 

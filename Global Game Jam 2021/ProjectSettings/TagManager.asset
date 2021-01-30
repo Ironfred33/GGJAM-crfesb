@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Sphere
+  - Deadly
+  - Enemy
   layers:
   - Default
   - TransparentFX
