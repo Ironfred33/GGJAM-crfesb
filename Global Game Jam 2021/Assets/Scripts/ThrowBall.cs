@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ThrowBall : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class ThrowBall : MonoBehaviour
 
     private bool carriesSphere;
 
+    public Image throwForceGUI;
+
+    private float _maxForce;
     public float thrust;
 
     private float _timer = 0.0f; 
@@ -25,6 +29,8 @@ public class ThrowBall : MonoBehaviour
     void Start()
     {
         rbSphere = sphere.GetComponent<Rigidbody>();
+
+        _maxForce = maxHoldTime;
         
     }
 
@@ -47,25 +53,16 @@ public class ThrowBall : MonoBehaviour
          //Ta Daaa
          transform.rotation = Quaternion.Euler(new Vector3(0f,-angle + 270, 0f));
 
-         if (carriesSphere == true )
+         if (carriesSphere)
          {
             sphere.transform.position = _spherePos;
          }
         
 
-         if(Input.GetKeyDown(KeyCode.G))
-         {
-            carriesSphere = false;
-            //_timer = 0;
+        if(carriesSphere)
+        {
 
-            rbSphere.AddForce(transform.forward * thrust);
-
-            
-
-            
-         }
-
-
+            throwForceGUI.enabled = true;
 
          if (Input.GetMouseButton(0))
         {
@@ -79,8 +76,15 @@ public class ThrowBall : MonoBehaviour
                 
             }
 
+               
+                
+            UpdateView();
+            
+
+            
+            
+
         }
-       
 
         if(Input.GetMouseButtonUp(0))
         {
@@ -94,8 +98,13 @@ public class ThrowBall : MonoBehaviour
             _timer = 0.0f;
 
         }
+        }
+        else
+        {
+            throwForceGUI.enabled = false;
+            throwForceGUI.fillAmount = 0;
+        }
 
-        
           
      
     }
@@ -116,6 +125,11 @@ public class ThrowBall : MonoBehaviour
                  carriesSphere = true;
                  
             }
+        }
+
+        void UpdateView()
+        {
+            throwForceGUI.fillAmount = _timer / _maxForce;
         }
 
 }
