@@ -11,12 +11,17 @@ public class ThrowBall : MonoBehaviour
 
     public GameObject sphere;
 
+    public Rigidbody rbSphere; 
+
     private Vector3 _spherePos;
 
     private bool carriesSphere;
 
+    public float thrust;
+
     void Start()
     {
+        rbSphere = sphere.GetComponent<Rigidbody>();
         
     }
 
@@ -47,11 +52,10 @@ public class ThrowBall : MonoBehaviour
          }
         
 
-
-            
          if(Input.GetKeyDown(KeyCode.G))
          {
-             carriesSphere = false;
+            carriesSphere = false;
+            rbSphere.AddForce(transform.forward * thrust);
          }
           
         
@@ -64,7 +68,6 @@ public class ThrowBall : MonoBehaviour
 
         void OnTriggerEnter(Collider other) {
             if (other.gameObject.CompareTag("Sphere")) {
-                 Debug.Log("Penis");
 
                  sphere.transform.position = _spherePos;
                  
