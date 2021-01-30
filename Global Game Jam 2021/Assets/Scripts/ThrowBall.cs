@@ -116,8 +116,10 @@ public class ThrowBall : MonoBehaviour
 
 
         void OnTriggerEnter(Collider other) {
-            if (other.gameObject.CompareTag("Sphere")) {
-
+            if (other.gameObject.CompareTag("Sphere")) 
+            
+            {
+            
                  sphere.transform.position = _spherePos;
                  
                  carriesSphere = true;
