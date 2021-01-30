@@ -16,6 +16,8 @@ public class ThrowBall : MonoBehaviour
 
     private Vector3 _spherePos;
 
+    public GameObject player;
+
     private bool carriesSphere;
 
     public Image throwForceGUI;
@@ -56,6 +58,12 @@ public class ThrowBall : MonoBehaviour
          if (carriesSphere)
          {
             sphere.transform.position = _spherePos;
+
+            player.GetComponent<PlayerMovement>().enabled = false;
+         }
+         else if(!carriesSphere)
+         {
+            player.GetComponent<PlayerMovement>().enabled = true;
          }
         
 
