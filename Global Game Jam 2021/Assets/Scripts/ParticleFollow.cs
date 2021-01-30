@@ -9,8 +9,6 @@ public class ParticleFollow : MonoBehaviour
     public float waitTime;
     public Ball ballMachine;
 
-    public RedParticles red;
-
     void Start()
     {
     }
@@ -20,11 +18,6 @@ public class ParticleFollow : MonoBehaviour
     {
         destination = ball.transform.position;
         StartCoroutine(MoveParticles());
-
-        if(ballMachine.currentState == ballState.red)
-        {
-            red.enabled = true;
-        }
     }
 
     private IEnumerator MoveParticles()
