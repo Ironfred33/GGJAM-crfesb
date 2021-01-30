@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,6 +19,8 @@ public class ThrowBall : MonoBehaviour
 
     public float thrust;
 
+    private float _timer = 0.0f; 
+    public float maxHoldTime = 2.0f;
 
     void Start()
     {
@@ -29,11 +31,9 @@ public class ThrowBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
 
         _spherePos = spherePos.transform.position;
-
-        //Debug.Log("Input Mouse X: " + Input.mousePosition.x);
-        //Debug.Log("Input Mouse Y: " + Input.mousePosition.y);
 
         //Get the Screen positions of the object
          Vector2 positionOnScreen = Camera.main.WorldToViewportPoint(transform.position);
@@ -56,16 +56,54 @@ public class ThrowBall : MonoBehaviour
          if(Input.GetKeyDown(KeyCode.G))
          {
             carriesSphere = false;
+            //_timer = 0;
+
             rbSphere.AddForce(transform.forward * thrust);
 
+            
+
+            
          }
-          
+
+
+
+         if (Input.GetMouseButton(0))
+        {
+            Debug.Log("Pressed left click.");        
+
+            
+            
+            if (_timer < maxHoldTime)
+            {
+                _timer += Time.deltaTime;
+                
+            }
+
+        }
+       
+
+        if(Input.GetMouseButtonUp(0))
+        {
+
+            carriesSphere = false;
+            
+            Debug.Log("Timer: " + _timer);
+
+            rbSphere.AddForce(transform.forward * thrust * _timer);
+
+            _timer = 0.0f;
+
+        }
+
         
+          
+     
     }
+
     
-    float AngleBetweenTwoPoints(Vector3 a, Vector3 b) {
-         return Mathf.Atan2(a.y - b.y, a.x - b.x) * Mathf.Rad2Deg;
-    }
+        float AngleBetweenTwoPoints(Vector3 a, Vector3 b) {
+            return Mathf.Atan2(a.y - b.y, a.x - b.x) * Mathf.Rad2Deg;
+         }
 
 
         void OnTriggerEnter(Collider other) {
@@ -81,3 +119,4 @@ public class ThrowBall : MonoBehaviour
         }
 
 }
+
