@@ -19,6 +19,7 @@ public class ThrowBall : MonoBehaviour
 
     public float thrust;
 
+
     void Start()
     {
         rbSphere = sphere.GetComponent<Rigidbody>();
@@ -56,6 +57,7 @@ public class ThrowBall : MonoBehaviour
          {
             carriesSphere = false;
             rbSphere.AddForce(transform.forward * thrust);
+
          }
           
         
