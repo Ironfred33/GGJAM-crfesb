@@ -19,12 +19,12 @@ public class PlayerMovement : MonoBehaviour
     
     void Update()
     {
-        //moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
-        //moveVelocity = moveInput * moveSpeed;
+        moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+        moveVelocity = moveInput * moveSpeed;
 
 
         
-        if (Input.GetKey(KeyCode.W))
+        /* if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(Vector3.forward * Time.deltaTime * speed);
         }
@@ -41,11 +41,12 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.Translate(Vector3.left * Time.deltaTime * speed);
         }
+        */
 
     }
 
     private void FixedUpdate()
     {
-       // rb.velocity = moveVelocity;
+       rb.velocity = moveVelocity;
     }
 }
