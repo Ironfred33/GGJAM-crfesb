@@ -1824,7 +1824,7 @@ ParticleSystem:
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-        ctime1: 29105
+        ctime1: 32768
         ctime2: 65535
         ctime3: 0
         ctime4: 0
@@ -18359,8 +18359,7 @@ MonoBehaviour:
   rbSphere: {fileID: 0}
   throwForceGUI: {fileID: 484679602}
   thrust: 15
-  maxHoldTime: 2
---- !u!108 &1049731545
+  maxHoldTime: 2--- !u!108 &1049731545
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -21036,6 +21035,7 @@ GameObject:
   - component: {fileID: 1992805535}
   - component: {fileID: 1992805536}
   - component: {fileID: 1992805537}
+  - component: {fileID: 1992805538}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Sphere
@@ -21333,6 +21333,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bfc3b1f0cacb3e44a6688b8cb9aa44d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1992805538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992805527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd087dc31e87b6948b23c035ff4f1169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  ps: {fileID: 122968547}
 --- !u!1 &2026706178
 GameObject:
   m_ObjectHideFlags: 0
