@@ -33,22 +33,25 @@ public class OpenDoor : MonoBehaviour
             
             {
                 Destroy(this.gameObject);
+                Destroy(other.gameObject);
                  
             }
-            if(colorset.red)
+            else if(colorset.red)
             {
                 if (other.gameObject.CompareTag("Sphere") && !doorOpen && ballMachine.currentState == ballState.red) 
             
             {
                 Destroy(this.gameObject);
+                Destroy(other.gameObject);
                  
             }
-            if(colorset.green)
+            else if(colorset.green)
             {
                 if (other.gameObject.CompareTag("Sphere") && !doorOpen && ballMachine.currentState == ballState.green) 
             
             {
                 Destroy(this.gameObject);
+                Destroy(other.gameObject);
                  
             }
 

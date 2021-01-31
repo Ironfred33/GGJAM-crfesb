@@ -2830,7 +2830,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2908860678544688619}
   - component: {fileID: 1789070679}
-  - component: {fileID: 1789070678}
+  - component: {fileID: 4268223067110015526}
   m_Layer: 0
   m_Name: Tor
   m_TagString: Untagged
@@ -2879,7 +2879,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.9476182, y: 2.5727692, z: 0.64920807}
   m_Center: {x: 0.7881721, y: -0.7863846, z: -0.10766029}
---- !u!114 &1789070678
+--- !u!114 &4268223067110015526
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2888,11 +2888,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2908860678544688618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97f17f0239f2ed34cba009116ccdd9a4, type: 3}
+  m_Script: {fileID: 11500000, guid: c76d36f8e643375458a1b07acd53dbd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorOpen: 0
-  colorset: {fileID: 3725742240280606048}
   ballMachine: {fileID: 0}
 --- !u!1 &2908860678583469831
 GameObject:
@@ -8128,9 +8126,9 @@ GameObject:
   - component: {fileID: 2908860680015583674}
   - component: {fileID: 2908860680015583673}
   - component: {fileID: 2908860680015583672}
-  - component: {fileID: 3725742240280606048}
+  - component: {fileID: 1616347089}
   m_Layer: 0
-  m_Name: Tor
+  m_Name: Tor_Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9509,7 +9507,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!114 &3725742240280606048
+--- !u!114 &1616347089
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9518,12 +9516,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2908860680015583671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 949a13eed13883a4a85e44ad37b3d80d, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ed2ffc145b913a4f879043a69a94a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blue: 0
-  red: 0
-  green: 0
   sphereColor: {fileID: 8168969339675861741}
 --- !u!1 &2908860680183346332
 GameObject:
