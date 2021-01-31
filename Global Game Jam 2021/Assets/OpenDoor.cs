@@ -8,6 +8,11 @@ public class OpenDoor : MonoBehaviour
 
 
     public bool doorOpen;
+
+    private string _doorColor;
+
+    public SetColor colorset;
+    public Ball ballMachine;
     void Start()
     {
         
@@ -21,11 +26,35 @@ public class OpenDoor : MonoBehaviour
 
 
      void OnTriggerEnter(Collider other) {
-            if (other.gameObject.CompareTag("Sphere") && !doorOpen) 
+
+           if(colorset.blue)
+            {
+                if (other.gameObject.CompareTag("Sphere") && !doorOpen && ballMachine.currentState == ballState.blue) 
             
             {
                 Destroy(this.gameObject);
                  
             }
+            if(colorset.red)
+            {
+                if (other.gameObject.CompareTag("Sphere") && !doorOpen && ballMachine.currentState == ballState.red) 
+            
+            {
+                Destroy(this.gameObject);
+                 
+            }
+            if(colorset.green)
+            {
+                if (other.gameObject.CompareTag("Sphere") && !doorOpen && ballMachine.currentState == ballState.green) 
+            
+            {
+                Destroy(this.gameObject);
+                 
+            }
+
+
+            }
+
+
         }
-}
+}}}
