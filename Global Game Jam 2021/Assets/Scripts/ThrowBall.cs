@@ -22,6 +22,10 @@ public class ThrowBall : MonoBehaviour
 
     public Image throwForceGUI;
 
+    //public Transform SphereHolder;
+
+    //public Transform parent;
+
     private float _maxForce;
     public float thrust;
 
@@ -30,7 +34,6 @@ public class ThrowBall : MonoBehaviour
 
     void Start()
     {
-        //rbSphere = sphere.GetComponent<Rigidbody>();
 
         _maxForce = maxHoldTime;
         
@@ -95,6 +98,8 @@ public class ThrowBall : MonoBehaviour
         {
 
             carriesSphere = false;
+
+            //UnSetParent(SphereHolder);
             
             Debug.Log("Timer: " + _timer);
 
@@ -128,6 +133,8 @@ public class ThrowBall : MonoBehaviour
                  sphere.transform.position = _spherePos;
 
                  rbSphere = other.gameObject.GetComponent<Rigidbody>();
+
+                //SetTheParent(SphereHolder);
                  
                  carriesSphere = true;
                  
@@ -139,5 +146,27 @@ public class ThrowBall : MonoBehaviour
             throwForceGUI.fillAmount = _timer / _maxForce;
         }
 
+       /* public void SetTheParent(Transform newParent)
+    {
+        // Sets "newParent" as the new parent of the child GameObject.
+        sphere.transform.SetParent(newParent);
+
+        // Same as above, except worldPositionStays set to false
+        // makes the child keep its local orientation rather than
+        // its global orientation.
+        //child.transform.SetParent(newParent, false);
+
+        // Setting the parent to ‘null’ unparents the GameObject
+        // and turns child into a top-level object in the hierarchy
+        //child.transform.SetParent(null);
+    }
+
+    public void UnSetParent(Transform newParent)
+    {
+        sphere.transform.SetParent(null);
+    }
+        
+
+  */
 }
 
