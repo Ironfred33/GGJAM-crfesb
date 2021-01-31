@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 moveVelocity;
     private Rigidbody rb;
     public SceneLoader sceneload;
-    public KeyCode respawnKey;
 
     private float verticalAxis;
     private float horizontalAxis;
@@ -59,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-        if(Input.GetKeyDown(respawnKey))
+        if(Input.GetKeyDown(KeyCode.F12))
         {
             sceneload.ReloadCurrentScene();
         }
