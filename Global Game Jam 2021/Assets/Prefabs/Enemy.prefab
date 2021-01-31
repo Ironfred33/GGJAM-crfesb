@@ -125,5 +125,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPos: {fileID: 0}
-  chaseRadius: 3
-  moveSpeed: 3
+  chaseRadius: 5
+  moveSpeed: 2
