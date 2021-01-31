@@ -64,4 +64,12 @@ public class PlayerMovement : MonoBehaviour
             sceneload.ReloadCurrentScene();
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            sceneload.ReloadCurrentScene();
+        }
+    }
 }
