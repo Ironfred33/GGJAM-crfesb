@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4819618123499141039}
   m_Layer: 0
-  m_Name: InteractivePrefab
+  m_Name: InteractiveTorch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1100,7 +1100,7 @@ GameObject:
   - component: {fileID: 2691517461164408869}
   - component: {fileID: 2691517461164408871}
   - component: {fileID: 2691517461164408868}
-  - component: {fileID: 2691517461164408870}
+  - component: {fileID: 2654850801815373622}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -1144,7 +1144,7 @@ CapsuleCollider:
   m_Height: 1.6308628
   m_Direction: 1
   m_Center: {x: -5.8585034e-18, y: -0.11535555, z: 0.12541223}
---- !u!114 &2691517461164408870
+--- !u!114 &2654850801815373622
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1153,7 +1153,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2691517461164408890}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eb939cd8530c8a4d9a3fc4a2f2517d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 58cff7b8522e61748a41f90b891cf20e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fireParticles: {fileID: 8853510418284368169}
