@@ -190,6 +190,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ca78d18e68814f49bf9b67b26b1cbee, type: 3}
+--- !u!1 &2522589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1978672258998138170, guid: 8ca78d18e68814f49bf9b67b26b1cbee,
+    type: 3}
+  m_PrefabInstance: {fileID: 2522588}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &27355322
 GameObject:
   m_ObjectHideFlags: 0
@@ -2968,6 +2974,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1116791569}
+    - target: {fileID: 8363921993095966219, guid: c788eebf3db1daf4285e396b64ab1a5a,
+        type: 3}
+      propertyPath: sphere
+      value: 
+      objectReference: {fileID: 2522589}
+    - target: {fileID: 8363921993095966219, guid: c788eebf3db1daf4285e396b64ab1a5a,
+        type: 3}
+      propertyPath: throwForceGUI
+      value: 
+      objectReference: {fileID: 484679602}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c788eebf3db1daf4285e396b64ab1a5a, type: 3}
 --- !u!114 &389209550 stripped
@@ -2976,7 +2992,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2522588}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2522589}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd087dc31e87b6948b23c035ff4f1169, type: 3}
@@ -5281,7 +5297,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17670
+  m_Name: pb_Mesh39240
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7266,7 +7282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spherePos: {fileID: 1215944726}
-  sphere: {fileID: 0}
+  sphere: {fileID: 2522589}
   rbSphere: {fileID: 0}
   player: {fileID: 1680309012}
   throwForceGUI: {fileID: 484679602}

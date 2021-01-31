@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 6598228655158856472}
   - component: {fileID: 6598228655158856473}
   - component: {fileID: 6598228655158856476}
-  - component: {fileID: 6598228655158856467}
   - component: {fileID: 6598228655158856466}
+  - component: {fileID: 8363921993095966219}
   m_Layer: 0
   m_Name: PlayerV2
   m_TagString: Player
@@ -129,25 +129,6 @@ MonoBehaviour:
   moveSpeed: 3
   sceneload: {fileID: 0}
   speed: 5
---- !u!114 &6598228655158856467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6598228655158856474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eba5d23b76f6d714fad1d04c96979604, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spherePos: {fileID: 6598228655888344068}
-  sphere: {fileID: 0}
-  rbSphere: {fileID: 0}
-  player: {fileID: 6598228655158856474}
-  throwForceGUI: {fileID: 0}
-  thrust: 15
-  maxHoldTime: 2
 --- !u!114 &6598228655158856466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4110,6 +4091,25 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!114 &8363921993095966219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6598228655158856474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 427dc4ac8edc8014e83feb85624119df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spherePos: {fileID: 6598228655888344068}
+  sphere: {fileID: 0}
+  rbSphere: {fileID: 0}
+  player: {fileID: 6598228655158856474}
+  throwForceGUI: {fileID: 0}
+  thrust: 15
+  maxHoldTime: 2
 --- !u!1 &6598228655888344068
 GameObject:
   m_ObjectHideFlags: 0
