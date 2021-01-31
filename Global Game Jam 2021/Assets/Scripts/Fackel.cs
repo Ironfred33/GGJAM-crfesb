@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Fackel : MonoBehaviour
 {
+
+    // hi freddy
     public GameObject fireParticles;
     public Ball ballMachine;
     public GameObject torchLight;

@@ -44,6 +44,7 @@ public class ThrowBall : MonoBehaviour
     {
         
 
+        // hallo freddy
         _spherePos = spherePos.transform.position;
 
         //Get the Screen positions of the object
