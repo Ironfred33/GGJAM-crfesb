@@ -101,7 +101,7 @@ public class ThrowBall : MonoBehaviour
 
             //UnSetParent(SphereHolder);
             
-            Debug.Log("Timer: " + _timer);
+            //Debug.Log("Timer: " + _timer);
 
             rbSphere.AddForce(transform.forward * thrust * _timer);
 
