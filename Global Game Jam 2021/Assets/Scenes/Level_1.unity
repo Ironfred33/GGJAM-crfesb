@@ -40657,7 +40657,7 @@ PrefabInstance:
     - target: {fileID: 6598228655158856477, guid: c788eebf3db1daf4285e396b64ab1a5a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.89
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 6598228655158856477, guid: c788eebf3db1daf4285e396b64ab1a5a,
         type: 3}
@@ -60766,7 +60766,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4098
+  m_Name: pb_Mesh22136
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -67395,6 +67395,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 791271575}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1393097626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393097617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 427dc4ac8edc8014e83feb85624119df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spherePos: {fileID: 1403778191}
+  sphere: {fileID: 0}
+  rbSphere: {fileID: 0}
+  player: {fileID: 1393097617}
+  throwForceGUI: {fileID: 484679602}
+  thrust: 15
+  maxHoldTime: 2
 --- !u!43 &1394067591
 Mesh:
   m_ObjectHideFlags: 0
@@ -67870,6 +67889,12 @@ Transform:
   m_Father: {fileID: 984733958}
   m_RootOrder: 72
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1403778191 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6598228655888344068, guid: c788eebf3db1daf4285e396b64ab1a5a,
+    type: 3}
+  m_PrefabInstance: {fileID: 791271575}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1407122383
 Mesh:
   m_ObjectHideFlags: 0
@@ -90157,13 +90182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eba5d23b76f6d714fad1d04c96979604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spherePos: {fileID: 0}
-  sphere: {fileID: 1992805527}
-  rbSphere: {fileID: 0}
-  player: {fileID: 0}
-  throwForceGUI: {fileID: 0}
-  thrust: 20
-  maxHoldTime: 2
 --- !u!82 &1992805536
 AudioSource:
   m_ObjectHideFlags: 0
