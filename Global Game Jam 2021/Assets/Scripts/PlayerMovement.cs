@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
     public SceneLoader sceneload;
     public KeyCode respawnKey;
 
+    private float verticalAxis;
+    private float horizontalAxis;
+
     public float speed = 5;
     void Start()
     {
@@ -21,8 +24,40 @@ public class PlayerMovement : MonoBehaviour
     
     void Update()
     {
-        moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
-        moveVelocity = moveInput * moveSpeed;
+        //moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+        //moveVelocity = moveInput * moveSpeed;
+
+
+
+        verticalAxis = Input.GetAxis("Vertical");
+        horizontalAxis = Input.GetAxis("Horizontal");
+
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            transform.Translate(0, 0, verticalAxis * Time.deltaTime * speed, Space.World);
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            transform.Translate(0, 0, verticalAxis * Time.deltaTime * speed, Space.World);
+
+        }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Translate(horizontalAxis * Time.deltaTime * speed, 0, 0, Space.World);
+            
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            transform.Translate(horizontalAxis * Time.deltaTime * speed, 0, 0, Space.World);
+
+        }
+
+
+
+
+
 
         if(Input.GetKeyDown(respawnKey))
         {
@@ -30,32 +65,23 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        
-        /* if (Input.GetKey(KeyCode.W))
-        {
-            transform.Translate(Vector3.forward * Time.deltaTime * speed);
-        }
-        else if(Input.GetKey(KeyCode.S))
-        {
-            transform.Translate(Vector3.back * Time.deltaTime * speed);
-        }
 
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Translate(Vector3.right * Time.deltaTime * speed);
-        }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            transform.Translate(Vector3.left * Time.deltaTime * speed);
-        }
-        */
+
+        
+
+
+        
+        
 
     }
 
+    /*
     private void FixedUpdate()
     {
        rb.velocity = moveVelocity;
     }
+
+    */
 
     private void OnTriggerEnter(Collider other)
     {
