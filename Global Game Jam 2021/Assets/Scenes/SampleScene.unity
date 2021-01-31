@@ -5545,7 +5545,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &257053580
 Light:
   m_ObjectHideFlags: 0
@@ -19350,7 +19350,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   sceneload: {fileID: 0}
-  respawnKey: 0
   speed: 5
 --- !u!114 &1049731544
 MonoBehaviour:
